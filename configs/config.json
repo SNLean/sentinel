@@ -1,0 +1,12 @@
+{
+    "prefix": "!",
+    "dbmongoose": "mongodb+srv://dbLean:Flash3213@discord-bot.0sebpqb.mongodb.net/DiscordBotDB?retryWrites=true&w=majority",
+    "dueñoid": "840353061968805959",
+    "clientId": "923237272478941205",
+    "logC": "955839292729618533",
+    "logR": "956374631957286922",
+    "color": "#2c2f33",
+    "wrongcolor": "#e01e01",
+    "footertext": "x",
+    "footericon": "https://cdn.discordapp.com/attachments/931781920000454734/946841270905630841/Logo_DarkBOT_2.PNG"
+}
