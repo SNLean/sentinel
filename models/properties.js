@@ -1,15 +1,14 @@
 const mongoose = require("mongoose")
 
-const items = new mongoose.Schema({
+const properties = new mongoose.Schema({
     id: { type: Number, default: 0 },
     name: { type: String, default: 0 },
-    type: { type: String, default: 0 },
     price: { type: Number, default: 0 },
     emoji: { type: String, default: 0 },
     max: { type: Number, default: 0 },
-    growthtime: { type: String, default: null }
+    max_plants: { type: String, default: 0 }
 })
 
-const model = mongoose.model("items", items);
+const model = mongoose.model("properties", properties);
 
 module.exports = model;

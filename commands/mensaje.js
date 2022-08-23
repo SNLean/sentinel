@@ -1,24 +1,23 @@
 const itemModel = require(".././models/items")
 const { prefix } = require(".././configs/config.json")
 const { embed_info, embed_succes, embed_error } = require(".././configs/embeds.json")
-const { ActionRowBuilder, SelectMenuBuilder } = require("discord.js")
-
+const { ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle } = require("discord.js")
 module.exports = {
-    name: "shop",
-    alias: ["tienda"],
+    name: "test",
+    alias: ["prueba"],
     description: "Revisas tu balance",
     async execute(client, msg, args, cmd, Discord, invData, EmbedBuilder, cdData, ActionRowBuilder, interaction) {
 
         const embed0 = new EmbedBuilder()
-            .setTitle("🛒 Tienda")
-            .setDescription("Bienvenidos a la tienda.\nPuedes revisar el precio de cada objeto en el catalogo\nPodes comprar con **`!buy <item name o id>`**")
+            .setTitle("VERIFICACION")
+            .setDescription(`Clickea el boton para verificarte y ver el resto de canales!`)
             .setColor(embed_info)
-            .setImage("https://media.discordapp.net/attachments/1010997170553495622/1010997217856860241/nekoshop.png")
+        // .setImage("https://cdn.discordapp.com/attachments/1010997170553495622/1011435245553328189/nekoshaop.png?size=4096")
         const row = new ActionRowBuilder()
             .addComponents(
                 new SelectMenuBuilder()
                     .setCustomId('select')
-                    .setPlaceholder('Catalogo')
+                    .setPlaceholder('Categorias')
                     .addOptions(
                         {
                             label: 'Consumibles ',
@@ -44,21 +43,9 @@ module.exports = {
                             value: 'fourth_option',
                             emoji: "<:casa:1011016553715736616>"
                         },
-                    ),
-            );
+                    )
+            )
 
-        const filter = (interaction) => { interaction.isSelectMenu() && interaction.user.id === msg.author.id }
-
-        const collector = msg.channel.createMessageComponentCollector(filter);
-
-
-        collector.on("collect", async (collected) => {
-            const values = collected.values[0];
-            // console.log(values)
-            // collected.deferUpdate();
-        })
-
-
-        msg.channel.send({ embeds: [embed0], components: [row] });
+        msg.channel.send({ embeds: [embed0], components: [row] })
     }
 }

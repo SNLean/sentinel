@@ -20,15 +20,16 @@ module.exports = async (Discord, client, msg, interaction) => {
                 xp: 0,
                 level: 0,
                 pats: 0,
-                rep: 0
+                rep: 0,
+                properties: [],
+                tempHabitacion: 0
             })
-            console.log("Base de datos creada de:" + msg.author.id)
+            console.log("Base de datos creada de:" + msg.author.tag)
             profile.save()
         }
     } catch (err) {
         console.log(err)
     }
-
 
     let cdData;
 
@@ -49,8 +50,7 @@ module.exports = async (Discord, client, msg, interaction) => {
     }
 
     if (!msg.content.startsWith(prefix)) {
-        console.log("hola")
-        return
+        return console.log(msg.guild.name + " | " + msg.author.tag + " |  " + msg.content)
     }
 
     const args = msg.content.slice(prefix.length).split(/ +/);

@@ -3,16 +3,6 @@ const mongoose = require("mongoose");
 require('dotenv').config();
 
 const client = new Client({ intents: [GatewayIntentBits.MessageContent, new IntentsBitField(32767)] });
-const { token, dbmongoose } = require("./configs/config.json");
-
-mongoose.connect(dbmongoose, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log("Conectado a la base de datos de mongoose");
-}).catch((err) => {
-    console.log(err);
-});
 
 Array.prototype.count = function (valor) {
     return this.filter(x => x == valor).length;

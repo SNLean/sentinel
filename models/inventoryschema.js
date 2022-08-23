@@ -1,16 +1,18 @@
 const mongoose = require("mongoose")
 
 const invschema = new mongoose.Schema({
-    userID: { type: Number, require: true },
-    cash: { type: Number, default: 0 },
-    bank: { type: Number, default: 0 },
-    last_activity: { type: String, require: true },
-    maxspacebag: { type: Number, default: 5 },
-    inventory: { type: Array, default: [] },
-    xp: { type: Number, default: 0 },
-    level: { type: Number, default: 0 },
-    pats: { type: Number, default: 0 },
-    rep: { type: Number, default: 0 }
+    userID: { type: String },
+    cash: { type: Number },
+    bank: { type: Number },
+    last_activity: { type: String },
+    maxspacebag: { type: Number },
+    inventory: { type: Array },
+    xp: { type: Number },
+    level: { type: Number },
+    pats: { type: Number },
+    rep: { type: Number },
+    properties: { type: Array },
+    tempHabitacion: { type: Number }
 })
 
 const model = mongoose.model("invschema", invschema);

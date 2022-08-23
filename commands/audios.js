@@ -9,11 +9,11 @@ module.exports = {
     alias: ["audio"],
     description: "Reproduce un audio",
     async execute(client, msg, args, cmd, Discord, invData, EmbedBuilder, cdData) {
-        if (!args[0]) return msg.channel.send("Falta un argumento")
+        let mensajea = "Intenta usar: `" + prefix + "audio add <nombre> <URL>`"
+        let mensajer = "Intenta usar: `" + prefix + "audio remove <nombre>`"
+        if (!args[0]) return msg.channel.send(mensajea)
         let soundData = await sounds.findOne({ guildID: msg.guild.id, name: args[0] })
         let soundsData = await sounds.findOne({ guildID: msg.guild.id, name: args[1] })
-        let mensajea = "Intentna usar: `" + prefix + "audio add <nombre> <URL>`"
-        let mensajer = "Intentna usar: `" + prefix + "audio remove <nombre>`"
         if (args[0] === "add") {
             if (!args[1] || !args[2]) return msg.channel.send(mensajea)
             if (!soundData) {

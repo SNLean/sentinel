@@ -1,5 +1,8 @@
 {
     "embed_error": "#ff0000",
-    "embed_succes": "#008000",
-    "embed_info": "#1a76ff"
+    "embed_succes": "#21ff21",
+    "embed_info": "#1a76ff",
+    "embed_error_buy_msg": "<a:sn_no:977603863794303047> Usa: `!buy <item o id> <cantidad>`",
+    "embed_error_not_exist": "<a:sn_no:977603863794303047> Ese item no está disponible en la tienda.",
+    "embbebd_error_not_money": "<a:sn_no:977603863794303047> No tenes suficiente dinero"
 }

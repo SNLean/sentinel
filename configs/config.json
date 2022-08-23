@@ -1,6 +1,5 @@
 {
     "prefix": "!",
-    "dbmongoose": "mongodb+srv://dbLean:Flash3213@discord-bot.0sebpqb.mongodb.net/DiscordBotDB?retryWrites=true&w=majority",
     "dueñoid": "840353061968805959",
     "clientId": "923237272478941205",
     "logC": "955839292729618533",

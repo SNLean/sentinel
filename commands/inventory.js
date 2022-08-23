@@ -6,7 +6,7 @@ module.exports = {
     description: "Revisas tu balance",
     async execute(client, msg, args, cmd, Discord, invData, EmbedBuilder, cdData) {
 
-        let items = ["Semillas normales", "Macetas", ":military_medal: Medalla de beta tester", "Mochila Chica", "Mochila Mediana", "Mochila Grande", "Hola"]
+        let items = ["Semillas normales", "Macetas", ":military_medal: Medalla de beta tester", "Water"]
         let itemsinv = invData.inventory
         // console.log(invData.inventory.count())
 
